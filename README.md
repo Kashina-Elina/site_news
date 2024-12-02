@@ -1,4 +1,5 @@
 ![](https://github.com/Kashina-Elina/site_news/blob/main/docker-compose.yml-site_news-Visual-Studio-Code-_Администратор_-2024-12-02-14-46-49.gif)
+![](https://github.com/Kashina-Elina/site_news/blob/main/Create-Next-App-Opera-2024-12-02-14-48-02.gif)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
