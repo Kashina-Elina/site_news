@@ -15,4 +15,6 @@ model news {
   excerpt String
   text    String
   image   String?
+
+  @@map("news") // Указываем правильное имя таблицы в базе данных
 }

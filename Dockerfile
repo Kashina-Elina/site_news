@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Установка зависимостей
-RUN npm install
+RUN npm install --save-dev ts-node
 
 # Копирование исходного кода приложения
 COPY . .

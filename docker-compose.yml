@@ -53,22 +53,29 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgresql://postgres:0000@db:5432/news_site_bd
+      - DATABASE_URL=postgresql://postgres:0000@db:5432/news_site_bd
     depends_on:
       - db
+    command: >
+      sh -c "
+      npx prisma migrate deploy &&
+      npx prisma db seed &&
+      npm run dev"
     volumes:
       - .:/src/app
       - /node_modules
+    networks:
+      - my-app-network
   db:
     image: postgres:17
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 0000
-      POSTGRES_DB: news_site_bd
-    ports:
-      - "5433:5432"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=0000
+      - POSTGRES_DB=news_site_bd
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - my-app-network
   nginx:
     image: nginx:latest
     ports:
@@ -77,10 +84,12 @@ services:
       - ./nginx/default.conf:/etc/nginx/default.conf
     depends_on:
       - app
+    networks:
+      - my-app-network
 
 volumes:
   pgdata:
 
-
-
+networks:
+  my-app-network:
 

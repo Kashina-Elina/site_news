@@ -38,48 +38,53 @@ export default function AddNewsForm() {
   };
 
   return (
-    <div className="text-black">
-      <form onSubmit={handleSubmit}>
-        <label>
+    <div className="text-white grid grid-cols-1 gap-4">
+      <form onSubmit={handleSubmit} className="w-full">
+        <label className="block mb-2">
           Title:
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
+            className="text-black"
           />
         </label>
-        <label>
+        <label className="block mb-2">
           Date:
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
+            className="text-black"
           />
         </label>
-        <label>
+        <label className="block mb-2">
           Excerpt:
           <textarea
             value={excerpt}
             onChange={(e) => setExcerpt(e.target.value)}
             required
+            className="text-black"
           />
         </label>
-        <label>
+        <label className="block mb-2">
           Text:
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
             required
+            className="text-black"
           />
         </label>
-        <label>
+        <label className="block mb-2">
           Image URL:
           <input
             type="text"
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            className="text-black"
           />
         </label>
         <button type="submit">Add News</button>
