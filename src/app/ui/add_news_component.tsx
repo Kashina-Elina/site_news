@@ -38,56 +38,61 @@ export default function AddNewsForm() {
   };
 
   return (
-    <div className="text-white grid grid-cols-1 gap-4">
-      <form onSubmit={handleSubmit} className="w-full">
-        <label className="block mb-2">
+    <div className="text-white grid grid-cols-1 gap-8">
+      <form onSubmit={handleSubmit} className="w-full mx-auto">
+        <label className="flex flex-col mb-2">
           Title:
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-            className="text-black"
+            className="text-black w-full p-2 border border-gray-300 rounded"
           />
         </label>
-        <label className="block mb-2">
+        <label className="flex flex-col mb-2">
           Date:
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
-            className="text-black"
+            className="text-black w-full p-2 border border-gray-300 rounded"
           />
         </label>
-        <label className="block mb-2">
+        <label className="flex flex-col mb-2">
           Excerpt:
           <textarea
             value={excerpt}
             onChange={(e) => setExcerpt(e.target.value)}
             required
-            className="text-black"
+            className="text-black w-full p-2 border border-gray-300 rounded"
           />
         </label>
-        <label className="block mb-2">
+        <label className="flex flex-col mb-2">
           Text:
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
             required
-            className="text-black"
+            className="text-black w-full p-2 border border-gray-300 rounded"
           />
         </label>
-        <label className="block mb-2">
+        <label className="flex flex-col mb-2">
           Image URL:
           <input
             type="text"
             value={image}
             onChange={(e) => setImage(e.target.value)}
-            className="text-black"
+            className="text-black w-full p-2 border border-gray-300 rounded"
           />
         </label>
-        <button type="submit">Add News</button>
+        <button
+          type="submit"
+          className="w-96 ml-32 flex rounded-full bg-white hover:bg-violet-600 text-black hover:text-white items-center mt-4 justify-center"
+        >
+          Add News
+        </button>
       </form>
       {responseMessage && <p>{responseMessage}</p>}
     </div>

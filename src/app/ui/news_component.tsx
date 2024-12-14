@@ -14,7 +14,10 @@ export default function NewsComponent({
     <div className="grid grid-cols-1 gap-4">
       {newsData.map((elem) => (
         <Link href={`/news/${elem.id}`} key={elem.id} className={"group"}>
-          <div key={elem.id} className="bg-gray-700 rounded-lg shadow-sm p-6">
+          <div
+            key={elem.id}
+            className="bg-gray-200 text-black rounded-lg shadow-sm p-6"
+          >
             <div className="font-bold">Мяу, {elem.title}</div>
             {isOneNews && (
               <div>
