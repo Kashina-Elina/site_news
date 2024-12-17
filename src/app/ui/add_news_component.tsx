@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function AddNewsForm() {
   const [title, setTitle] = useState<string>("");
-  const [date, setDate] = useState<string>(""); // Дата в формате ISO (YYYY-MM-DD)
+  const [date, setDate] = useState<string>(""); 
   const [excerpt, setExcerpt] = useState<string>("");
   const [text, setText] = useState<string>("");
   const [image, setImage] = useState<string>("");
@@ -20,9 +20,7 @@ export default function AddNewsForm() {
       });
 
       if (response.ok) {
-        // const data = await response.json();
         setResponseMessage("News added successfully!");
-        // Очистка формы
         setTitle("");
         setDate("");
         setExcerpt("");

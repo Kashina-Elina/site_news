@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres:0000@db:5432/news_site_bd"
 }
 
 generator client {
@@ -16,5 +16,5 @@ model news {
   text    String
   image   String?
 
-  @@map("news") // Указываем правильное имя таблицы в базе данных
+  @@map("news")
 }

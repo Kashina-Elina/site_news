@@ -1,9 +1,6 @@
 import prisma from "./db";
-// import { news, PrismaClient } from "@prisma/client";
 import { unstable_noStore as noStore } from "next/cache";
-// import { Prisma } from "@prisma/client";
 
-// export async function addNews(newsData: Prisma.newsCreateInput) {}
 
 export async function getAllNews() {
   noStore();
