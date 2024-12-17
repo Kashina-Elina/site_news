@@ -1,3 +1,5 @@
+![news_site](https://github.com/user-attachments/assets/411a9e8e-523a-4470-a1f5-b8e85de675bc)
+
 # With Docker Compose
 
 This example contains everything needed to get a Next.js development and production environment up and running with Docker Compose.
